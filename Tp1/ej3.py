@@ -1,23 +1,21 @@
-diccionario=dict()
+notas=list()
 materias=["Lengua","matematicas","historia","arte", "fisica"]
-men=10
+men=0
 menMat=""
 may=0
 mayMat=""
 suma=0
-for i in materias:
-    nota=int(input(f"Ingrese nota de {i}: "))
+for i in range(len(materias)):
+    nota=int(input(f"Ingrese nota de {materias[i]}: "))
     suma+=nota
-    diccionario[i]=nota
-    if nota<men:
-        men=nota
-        menMat=i
-    if nota>may:
-        may=nota
-        mayMat=i
+    notas.append(nota)
+    if nota<notas[men]:
+        men=i
+    if nota>notas[may]:
+        may=i
 
-
-print(f"Notas: {diccionario}\n"
-      f"Promedio: {suma/len(materias)}\n"
-      f"Mejor materia: {mayMat} con nota: {may}\n"
-      f"Peor materia: {menMat} con nota: {men}\n")
+for i in range(5):
+    print(f"{materias[i]}: {notas[i]}")
+print(f"Promedio: {suma/len(materias)}\n"
+      f"Mejor materia: {materias[may]} con nota: {notas[may]}\n"
+      f"Peor materia: {materias[men]} con nota: {notas[men]}\n")
