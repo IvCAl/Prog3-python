@@ -35,6 +35,7 @@ def muestraMatriz(matriz,fila:int,columna:int):
     print(f"Matriz de {fila} x {columna} : ")
     for i in range(fila):
         print(matriz[i])
+        
 if __name__ == '__main__':
     fil=2
     col=2
