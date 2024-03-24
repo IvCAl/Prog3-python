@@ -37,8 +37,8 @@ def muestraMatriz(matriz,fila:int,columna:int):
         print(matriz[i])
         
 if __name__ == '__main__':
-    fil=2
-    col=2
+    fil=5
+    col=5
     matriz=cargaMatriz(fil,col)
     arraySumaFila=sumaFilas(matriz,fil,col)
     arraySumaColumna=sumaColumnas(matriz,fil,col)
