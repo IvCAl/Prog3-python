@@ -1,7 +1,6 @@
 from __future__ import annotations
 class Punto:
     xy:list
-
     def __init__(self,x=0,y=0):
         self.xy=[x,y]
     def __str__(self):
@@ -30,7 +29,6 @@ class Punto:
         else:
             s="El punto se encuentra en el cuarto cuadrante"
         return s
-    
     def vector(self,Q:Punto):
         x1=self.getX
         y1=self.getY

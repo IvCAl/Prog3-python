@@ -10,13 +10,13 @@ class Entero:
         return self.numero
     def setNumero(self, numero):
         self.numero = numero
-    def suma(a:Entero, b:Entero):
+    def __add__(a:Entero, b:Entero):
         return Entero(a.getNumero + b.getNumero)
-    def resta(a:Entero,b:Entero):
+    def __sub__(a:Entero,b:Entero):
         return Entero(a.getNumero - b.getNumero)
-    def producto(a:Entero,b:Entero):
+    def __mul__(a:Entero,b:Entero):
         return Entero(a.getNumero * b.getNumero)
-    def division(a:Entero,b:Entero):
+    def __truediv__(a:Entero,b:Entero):
         if b.getNumero == 0:
             print("No se puede dividir por 0")
             return Entero()
